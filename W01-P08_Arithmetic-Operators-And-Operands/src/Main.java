@@ -1,5 +1,9 @@
 import java.util.Scanner;
 
+/* Takes 3 input, type double, from user as a, b, c
+    does the calculation for a + b * c - b foreseeing arithmetic priority.
+ */
+
 public class Main {
     public static void main(String[] args) {
         double a, b, c;
