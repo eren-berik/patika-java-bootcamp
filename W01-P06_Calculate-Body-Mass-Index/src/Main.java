@@ -1,5 +1,10 @@
 import java.util.Scanner;
 
+/*
+    Calculates body mass index, takes 2 inputs, data type of double,height and weight.
+    Calculates the body mass in the calculateBodyMassIndex method.
+ */
+
 public class Main {
     public static void main(String[] args) {
         double height, weight;
