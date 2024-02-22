@@ -1,5 +1,10 @@
 import java.util.Scanner;
 
+/*
+    This program prompts the user to enter two numbers and choose an arithmetic operation
+    It then performs the selected operation and displays the result
+*/
+
 public class Main {
     public static void main(String[] args) {
         double num1, num2;
