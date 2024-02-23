@@ -1,5 +1,13 @@
 import java.util.Scanner;
 
+/**
+ * This program prompts the user to enter their birth year and then determines their Chinese zodiac sign based on
+ * the Chinese zodiac cycle, which repeats every 12 years. The user's birth year is divided by 12, and the remainder
+ * determines their zodiac sign. The program uses a switch statement to map the remainder to the corresponding zodiac
+ * sign and prints the result. The Chinese zodiac signs are: Monkey, Rooster, Dog, Pig, Rat, Ox, Tiger, Rabbit,
+ * Dragon, Snake, Horse, and Goat.
+ */
+
 public class Main {
     public static void main(String[] args) {
         int year;
