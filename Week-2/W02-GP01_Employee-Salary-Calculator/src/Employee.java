@@ -83,9 +83,29 @@ public class Employee {
 
     @Override
     public String toString() {
+        // Calculate and print tax
+        double taxAmount = tax(salary);
+
+        // Calculate and print bonus
+        int bonusAmount = bonus(workHours);
+
+        // Calculate and print raise salary
+        double raiseAmount = raiseSalary(hireYear) - salary;
+
+        // Calculate and print total salary after tax and bonus
+        double totalSalary = salary - taxAmount + bonusAmount;
+
+        // Calculate and print total salary including raise
+        double totalSalaryWithRaise = raiseAmount + salary + bonusAmount - taxAmount;
+
         return "Adı: " + name + "\n" +
                 "Maaşı: " + salary + "\n" +
                 "Çalışma Saati: " + workHours + "\n" +
-                "Başlangıç Yılı: " + hireYear;
-     }
+                "Başlangıç Yılı: " + hireYear + "\n" +
+                "Vergi: " + taxAmount + "\n" +
+                "Bonus: " + bonusAmount + "\n" +
+                "Maaş Artışı: " + raiseAmount + "\n" +
+                "Vergi ve Bonuslar ile birlikte maaş: " + totalSalary + "\n" +
+                "Toplam Maaş: " + totalSalaryWithRaise;
+      }
 }
