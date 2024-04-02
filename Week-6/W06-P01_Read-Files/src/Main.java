@@ -3,7 +3,7 @@ import java.io.*;
 public class Main {
     public static void main(String[] args) {
         // Define the file path
-        String filePath = "W06-P01_Read-Write-File\\src\\file.txt";
+        String filePath = "Week-6/W06-P01_Read-Files/file.txt";
 
         // Create a File object with the specified file path
         File file = new File(filePath);
@@ -28,19 +28,21 @@ public class Main {
 
             // Declare variables to store data
             String line; // to store each line read from the file
-            int currNum, sum = 0; // to store the current number read and the sum of numbers
+            int sum = 0; // to store the current number read and the sum of numbers
 
             // Read each line from the file until the end of the file is reached
             while ((line = bufferedReader.readLine()) != null) {
-                // Parse the current line into an integer
-                currNum = Integer.parseInt(line);
 
-                // Add the current number to the sum
-                sum += currNum;
+                // Add the current number to the sum, before parse it to integer
+                sum += Integer.parseInt(line);
             }
 
             // Print the sum of numbers read from the file
-            System.out.println(sum);
+            System.out.println("Summation of the numbers: " + sum);
+
+            // Close the streams
+            fileReader.close();
+            bufferedReader.close();
 
         } catch (FileNotFoundException e) {
             // Throw a runtime exception if the specified file is not found
