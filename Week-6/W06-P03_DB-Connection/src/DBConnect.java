@@ -41,11 +41,31 @@ public class DBConnect {
                 }
             }
 
+            // Print the rows that were added to the table
+            ResultSet resultSet = st.executeQuery("SELECT * FROM employees");
+            while (resultSet.next()) {
+                System.out.println("ID : " + resultSet.getInt("id"));
+                System.out.println("Name : " + resultSet.getString("name"));
+                System.out.println("Position : " + resultSet.getString("position"));
+                System.out.println("Salary : " + resultSet.getInt("salary"));
+                System.out.println("#################");
+            }
+
         } catch (SQLException ex) {
             System.out.println("SQLException: " + ex.getMessage());
             System.out.println("SQLState: " + ex.getSQLState());
             System.out.println("VendorError: " + ex.getErrorCode());
+        } finally {
+            try {
+                if (st != null) {
+                    st.close();
+                }
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException e) {
+                System.out.println("SQLException: " + e.getMessage());
+            }
         }
     }
-
 }
