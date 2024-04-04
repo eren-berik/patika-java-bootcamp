@@ -5,7 +5,7 @@ public class DBConnect {
     public static final String DB_USERNAME = "postgres";
     public static final String DB_PASSWORD = "1723";
 
-    public static void main(String[] args) {
+    public static void DBConnection() {
         Connection conn = null;
         Statement st = null;
         try {
